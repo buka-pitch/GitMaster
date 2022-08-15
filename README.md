@@ -11,4 +11,4 @@
 - This repo is currently on develpment and will be ready soon. 
 ```
 
-<img src="doc/img/'Screen Shot 2022-08-15 at 6.51.24 PM.png'" />
+<img src="Doc/img/'img.png'" />
