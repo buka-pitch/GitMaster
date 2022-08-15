@@ -10,9 +10,9 @@
 
 This is how we can use GitMaster to replace this commands using inline args
 
--   git add files    ------------------ -a
--   git commit -m "commit msg" -------- -c
--   git push.        ------------------ -p
+-   git add files --------------------- -a
+-   git commit -m "commit msg" ---- -c
+-   git push. ------------------------- -p
 -   git push to branch (optional) ----- -p branch
 
 ```html
