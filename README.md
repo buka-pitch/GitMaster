@@ -15,8 +15,14 @@ This is how we can use GitMaster to replace this commands using inline args
 -   git push
 -   git push to branch (optional)
 
-```diff
-! ./GitMaster -a <filename> -c <commit msg> -p (add branch name optional)
+```css
+h1 {
+    color: blue;
+}
+```
+
+```html
+<h1> ./GitMaster -a <filename> -c <commit msg> -p (add branch name optional)</h1>
 ```
 
 <img src="/Doc/img/img.png" />
