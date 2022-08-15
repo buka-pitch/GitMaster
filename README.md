@@ -4,9 +4,11 @@
 
 #
 
-<p style="color:red; font-size:13px; font-weight:bold">
-	<h4>This repo is currently on develpment and will be ready soon.</h4>
-	'''
-	- red text
-	'''
-</p>
+
+
+
+```diff
+- This repo is currently on develpment and will be ready soon. 
+```
+
+<img src="doc/img/'Screen Shot 2022-08-15 at 6.51.24 PM.png'" />
