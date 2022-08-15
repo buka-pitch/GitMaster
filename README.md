@@ -5,7 +5,7 @@
 #
 
 ```diff
-- This repo is currently on develpment and will be ready soon.
+- This repo is currently on develpment only MVP.
 ```
 
 This is how we can use GitMaster to replace this commands using inline args
@@ -25,6 +25,9 @@ default branch name is : main
 # 
 
 ## Simple multi choice mode
+```diff
+- This repo is currently on develpment and will be ready soon.
+```
 <img src="/Doc/img/loading.png" />
 
 <img src="/Doc/img/main.png" />
