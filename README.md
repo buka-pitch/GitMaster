@@ -22,3 +22,9 @@ This is how we can use GitMaster to replace this commands using inline args
 <img src="/Doc/img/img.png" />
 
 default branch name is : main
+# 
+
+## Simple multi choice mode
+<img src="/Doc/img/loading.png" />
+
+<img src="/Doc/img/main.png" />
