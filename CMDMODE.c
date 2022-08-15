@@ -39,7 +39,7 @@ void CMDMODE(int argc, char *argv[])
 		}
 		if (strcmp(argv[i], PUSH) == 0)
 		{
-			Push();
+			Push(argv[i + 1]);
 		}
 	}
 	free(filenames);

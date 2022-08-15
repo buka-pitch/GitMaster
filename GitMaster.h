@@ -25,7 +25,7 @@ void CMDMODE(int argc,char *argv[]);
 void help(void);
 char** Add(char **argv);
 void Commit(char *message);
-void Push(void);
+void Push(char *branch);
 void welcome(void);
 void _fork_excute(char *cmd, char **params);
 #endif

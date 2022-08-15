@@ -1,10 +1,13 @@
 #include "GitMaster.h"
 
 
-void Push(void)
+void Push(char *branch)
 {
-	char *cmd[] = {"git", "push", NULL};
-
+	char *cmd[6] = {"git", "push", "--set-upstream", "main", NULL};
+	if (branch)
+	{
+		cmd[3] = branch;
+	}
 
 	_fork_excute(cmd[0], cmd);
 }
