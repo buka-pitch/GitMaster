@@ -11,4 +11,4 @@
 - This repo is currently on develpment and will be ready soon. 
 ```
 
-<img src="Doc/img/'img.png'" />
+<img src="/Doc/img/img.png" />
