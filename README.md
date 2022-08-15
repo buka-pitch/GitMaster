@@ -11,4 +11,9 @@
 - This repo is currently on develpment and will be ready soon. 
 ```
 
+This is how we can use GitMaster to replace
+- git add files
+- git commit -m "commit msg"
+- git push
+- git push to branch (optional) 
 <img src="/Doc/img/img.png" />
