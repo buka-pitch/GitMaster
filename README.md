@@ -16,7 +16,7 @@ This is how we can use GitMaster to replace this commands using inline args
 -   git push to branch (optional)
 
 ```diff
-@@ ./GitMaster -a <filename> -c <commit msg> -p (add branch name optional)@@
+! ./GitMaster -a <filename> -c <commit msg> -p (add branch name optional)
 ```
 
 <img src="/Doc/img/img.png" />
