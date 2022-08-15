@@ -10,9 +10,9 @@ void MainChoice()
 	printf("\t4.  Show All Files in Git\n");
 	printf("\t5.  Create a New Branch\n");
 	printf("\t6.  Change Branch\n");
-	printf("\t7.  Merge To Branch");
-	printf("\tt8.  Rebase To  Branch\n");
-	printf("\n\nchoose your option :");
+	printf("\t7.  Merge To Branch\n");
+	printf("\t8.  Rebase To  Branch\n");
+	printf("\n\tchoose your option :");
 }
 void GUIMODE(void)
 {

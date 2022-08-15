@@ -2,7 +2,7 @@
 
 void welcome(void)
 {
-	
+
 	int check = system("which git");
 	int i = 0;
 	system("clear");
@@ -13,7 +13,7 @@ void welcome(void)
 	printf("");
 	if (check == 0)
 	{
-		
+
 		printf("\n\n\n\t\tLoading ");
 		while (i <= 5)
 		{
@@ -23,7 +23,7 @@ void welcome(void)
 			if (i == 5)
 			{
 				printf(" | Done\n");
-				sleep(1);
+				sleep(2);
 				system("clear");
 				printf("\t-------------------------------- GiTMaster --------------------------------\n\n");
 				printf("\t---------------------------------------------------------------------------\n\n");
