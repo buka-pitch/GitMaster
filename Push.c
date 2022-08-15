@@ -3,7 +3,7 @@
 
 void Push(char *branch)
 {
-	char *cmd[6] = {"git", "push", "--set-upstream", "main", NULL};
+	char *cmd[6] = {"git", "push", "--set-upstream", "origin", "main", NULL};
 	if (branch)
 	{
 		cmd[3] = branch;
