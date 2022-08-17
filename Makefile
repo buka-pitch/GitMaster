@@ -6,4 +6,5 @@ GitMaster: *.c
 	
 	
 clean:
-	rm *.o
+	rm GitMaster
+
