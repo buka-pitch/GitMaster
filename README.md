@@ -29,6 +29,10 @@ change branch to another branch (checkout branch)
 ```
 ./GitMaster -ch branch_name
 ```
+<img src="/Doc/img/branch.png">
+
+#
+
 ## Simple multi choice mode
 <img src="/Doc/img/loading.png" />
 
