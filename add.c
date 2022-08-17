@@ -11,11 +11,7 @@ char** Add(char **argv)
 	{
 		arguments[i] = argv[i - 2];
 	}
-	printf("add commands :");
-	for (int j = 0; arguments[j] != NULL; j++)
-	{
-		printf("%s ", arguments[j]);
-	}
+
 	_fork_excute(cmd, arguments);
 	return (arguments);
 }
