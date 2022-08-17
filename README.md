@@ -18,12 +18,17 @@ This is how we can use GitMaster to replace this commands using inline args
 ```html
 ./GitMaster -a <filename> -c <commit msg> -p (add branch name optional)
 ```
-
 <img src="/Doc/img/img.png" />
 
 default branch name is : main
+
 # 
 
+## change branch
+change branch to another branch (checkout branch)
+```
+./GitMaster -ch branch_name
+```
 ## Simple multi choice mode
 <img src="/Doc/img/loading.png" />
 
