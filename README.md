@@ -3,10 +3,10 @@
 ## This project helps you use git commands simply using shortcuts and multiple choice like gui
 
 #
-
+<!-- 
 ```diff
 - This repo is currently on develpment only MVP.
-```
+``` -->
 
 This is how we can use GitMaster to replace this commands using inline args
 
