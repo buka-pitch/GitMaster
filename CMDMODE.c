@@ -41,6 +41,11 @@ void CMDMODE(int argc, char *argv[])
 		{
 			Push(argv[i + 1]);
 		}
+
+	        if (strcmp(argv[i], CHANGE_BRANCH) == 0)
+        	{
+                	changeBranch(argv[i + 1]);
+        	}
 	}
 	free(filenames);
 }
