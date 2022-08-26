@@ -28,7 +28,7 @@ void Push(char *branch);
 void welcome(void);
 void _fork_excute(char *cmd, char **params);
 void changeBranch(char *branch);
-
+void Commit_Added(void);
 void push_selected(void);
 void pull_selected(void);
 void add_selected(void);
