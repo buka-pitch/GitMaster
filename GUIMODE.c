@@ -1,3 +1,9 @@
+/****************************************************************************
+* GitMaster GUIMODE AUTHOR : Biruk Yonas						    		*
+* Github repo : https://github.com/buka-pitch/GitMaster.git					*
+*																			*
+*****************************************************************************/
+
 #include "GitMaster.h"
 
 
@@ -37,7 +43,7 @@ void GUIMODE(void)
 
 /**
  * Evaluate_choice - function to evaluate the users input and serve as a switch
- * @num: number input of the user
+ * @num: number input of the
  */
 void Evaluate_choice(int num)
 {
@@ -104,6 +110,7 @@ void add_selected(void)
 		scanf("%s",check);
 		if (strcmp(check, "Y") == 0)
 		{
+			system("clear");
 			continue;
 		}
 		else if (strcmp(check, "N") == 0)
@@ -135,7 +142,8 @@ void Commit_Added(void)
 		printf("please enter commit message ...\n  :");
 		scanf("%s", msg);
 		Commit(msg);
-		sleep(2);
+		sleep(1);
+		Push_to_git();
 		GUIMODE();
 
 	}
@@ -143,10 +151,38 @@ void Commit_Added(void)
 	{
 		GUIMODE();
 	}
+}
 
+void Push_to_git(void)
+{
+	char *prompt = malloc(sizeof(char)*5);
+	char *prompt2 = malloc(sizeof(char)*5);
+	char branch[10];
+	printf("Do You Want to push it to git now! ?\n :  ");
+	scanf("%s",prompt);
+	if (strcmp(prompt, "Y") == 0)
+	{
+		printf("Do you want to Specify Branch name ?\n : ");
+		scanf("%s",prompt2);
+		if (strcmp(prompt2, "Y") == 0)
+		{
+			scanf("%s",branch);
+			Push(branch);
+		}
+		else if (strcmp(prompt2, "N") == 0)
+		{
+			Push(branch);
+		}
+	}
+	else if (strcmp(prompt, "N") == 0)
+	{
+		GUIMODE();
+	}
 }
 void push_selected(void)
-{}
+{
+	Push_to_git();
+}
 void pull_selected(void)
 {}
 void show_selected(void)

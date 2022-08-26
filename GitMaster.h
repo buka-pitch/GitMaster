@@ -18,6 +18,7 @@
 #include <unistd.h>
 #include <sys/wait.h>
 
+void Push_to_git(void);
 void Evaluate_choice(int num);
 void GUIMODE(void);
 void CMDMODE(int argc,char *argv[]);
