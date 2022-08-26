@@ -1,5 +1,9 @@
 #include "GitMaster.h"
 
+
+/**
+ * MainChoice - function to provide choose like choice
+ */
 void MainChoice()
 {
 	printf("\t Wha Do You Want To Do ?\n");
@@ -16,6 +20,10 @@ void MainChoice()
 	printf("\n\tchoose your option :");
 
 }
+
+/**
+ * GUIMODE - main function of GUIMODE
+ */
 void GUIMODE(void)
 {
 	int choosen_number;
@@ -27,7 +35,10 @@ void GUIMODE(void)
 	Evaluate_choice(choosen_number);
 }
 
-
+/**
+ * Evaluate_choice - function to evaluate the users input and serve as a switch
+ * @num: number input of the user
+ */
 void Evaluate_choice(int num)
 {
 	if (num && num >= 1)
@@ -71,6 +82,9 @@ void Evaluate_choice(int num)
 	}
 }
 
+/**
+ * add_selected - function to invoke the adding action from the add module
+ */
 void add_selected(void)
 {
 	int i = 0;
@@ -105,15 +119,19 @@ void add_selected(void)
 
 	}
 }
-
+/**
+ * Commit_Added - function to invoke the Commit action from the commit module
+ */
 void Commit_Added(void)
 {
+	system("clear");
 	char msg[10];
 	char *prompt = malloc(sizeof(char)*5);
 	printf("Do you want to Commit it now ?\n(Y) for yes (N) for no");
 	scanf("%s", prompt);
 	if (strcmp(prompt, "Y") == 0)
 	{
+		system("clear");
 		printf("please enter commit message ...\n  :");
 		scanf("%s", msg);
 		Commit(msg);
@@ -123,7 +141,7 @@ void Commit_Added(void)
 	}
 	else if (strcmp(prompt, "N") == 0)
 	{
-		
+		GUIMODE();
 	}
 
 }
