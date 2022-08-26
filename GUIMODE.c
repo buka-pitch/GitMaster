@@ -6,7 +6,11 @@
 
 #include "GitMaster.h"
 
-
+void cleaner(void)
+{
+	system("clear");
+	printf("-------------------------GitMast3r-------------------------------\n\n");
+}
 /**
  * MainChoice - function to provide choose like choice
  */
@@ -95,7 +99,7 @@ void add_selected(void)
 {
 	int i = 0;
 	char **filenames = malloc(sizeof(char)*20);
-	system("clear");
+	cleaner();
 	while (1)
 	{
 		char *buf = malloc(sizeof(char)*20);
@@ -103,14 +107,14 @@ void add_selected(void)
 		printf("Enter the File name To Add\n: ");
 		scanf("%s", buf);
 		filenames[i] = buf;
-
+		cleaner();
 		printf("%s added\n",filenames[i]);
 		i++;
 		printf("Do you want to add another file\n\t(Y) for yes and (N) for no\n");
 		scanf("%s",check);
 		if (strcmp(check, "Y") == 0)
 		{
-			system("clear");
+			cleaner();
 			continue;
 		}
 		else if (strcmp(check, "N") == 0)
@@ -131,14 +135,14 @@ void add_selected(void)
  */
 void Commit_Added(void)
 {
-	system("clear");
+	cleaner();
 	char msg[10];
 	char *prompt = malloc(sizeof(char)*5);
 	printf("Do you want to Commit it now ?\n(Y) for yes (N) for no");
 	scanf("%s", prompt);
 	if (strcmp(prompt, "Y") == 0)
 	{
-		system("clear");
+		cleaner();
 		printf("please enter commit message ...\n  :");
 		scanf("%s", msg);
 		Commit(msg);
@@ -162,6 +166,7 @@ void Push_to_git(void)
 	scanf("%s",prompt);
 	if (strcmp(prompt, "Y") == 0)
 	{
+		cleaner();
 		printf("Do you want to Specify Branch name ?\n : ");
 		scanf("%s",prompt2);
 		if (strcmp(prompt2, "Y") == 0)
