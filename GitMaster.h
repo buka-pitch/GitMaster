@@ -18,6 +18,7 @@
 #include <unistd.h>
 #include <sys/wait.h>
 
+void Evaluate_choice(int num);
 void GUIMODE(void);
 void CMDMODE(int argc,char *argv[]);
 void help(void);
@@ -28,4 +29,12 @@ void welcome(void);
 void _fork_excute(char *cmd, char **params);
 void changeBranch(char *branch);
 
+void push_selected(void);
+void pull_selected(void);
+void add_selected(void);
+void show_selected(void);
+void create_selected(void);
+void changeBranch_selected(void);
+void merge_selected(void);
+void rebase_selected(void);
 #endif
