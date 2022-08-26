@@ -84,7 +84,7 @@ void add_selected(void)
 		scanf("%s", buf);
 		filenames[i] = buf;
 
-		printf("%s",filenames[i]);
+		printf("%s added\n",filenames[i]);
 		i++;
 		printf("Do you want to add another file\n\t(Y) for yes and (N) for no\n");
 		scanf("%s",check);
@@ -94,8 +94,9 @@ void add_selected(void)
 		}
 		else if (strcmp(check, "N") == 0)
 		{
-			Add(filenames);
-			GUIMODE();
+			char **adder = Add(filenames);
+			sleep(2);
+			Commit_Added();
 			break;
 		}
 		i++;
@@ -103,6 +104,28 @@ void add_selected(void)
 		free(check);
 
 	}
+}
+
+void Commit_Added(void)
+{
+	char msg[10];
+	char *prompt = malloc(sizeof(char)*5);
+	printf("Do you want to Commit it now ?\n(Y) for yes (N) for no");
+	scanf("%s", prompt);
+	if (strcmp(prompt, "Y") == 0)
+	{
+		printf("please enter commit message ...\n  :");
+		scanf("%s", msg);
+		Commit(msg);
+		sleep(2);
+		GUIMODE();
+
+	}
+	else if (strcmp(prompt, "N") == 0)
+	{
+		
+	}
+
 }
 void push_selected(void)
 {}
