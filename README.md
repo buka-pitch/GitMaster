@@ -3,9 +3,15 @@
 ## This project helps you use git commands simply using shortcuts and multiple choice like gui
 
 #
+<<<<<<< HEAD
 
 <!-- ```diff
 - This repo is currently on develpment and will be ready soon.
+=======
+<!-- 
+```diff
+- This repo is currently on develpment only MVP.
+>>>>>>> main
 ``` -->
 
 This is how we can use GitMaster to replace this commands using inline args
@@ -33,6 +39,9 @@ change branch to another branch (checkout branch)
 #
 
 ## Simple multi choice mode
+```diff
+- This repo is currently on develpment and will be ready soon.
+```
 <img src="/Doc/img/loading.png" />
 
 <img src="/Doc/img/main.png" />
