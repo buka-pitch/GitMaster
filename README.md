@@ -3,9 +3,15 @@
 ## This project helps you use git commands simply using shortcuts and multiple choice like gui
 
 #
+<<<<<<< HEAD
+
+<!-- ```diff
+- This repo is currently on develpment and will be ready soon.
+=======
 <!-- 
 ```diff
 - This repo is currently on develpment only MVP.
+>>>>>>> main
 ``` -->
 
 This is how we can use GitMaster to replace this commands using inline args
@@ -19,7 +25,6 @@ This is how we can use GitMaster to replace this commands using inline args
 ./GitMaster -a <filename> -c <commit msg> -p (add branch name optional)
 ```
 <img src="/Doc/img/img.png" />
-
 default branch name is : main
 
 # 
