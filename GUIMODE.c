@@ -9,7 +9,9 @@
 void cleaner(void)
 {
 	system("clear");
-	printf("-------------------------GitMast3r-------------------------------\n\n");
+	printf("#################################################################\n");
+	printf("-------------------------GitMast3r-------------------------------\n");
+	printf("#################################################################\n\n");
 }
 /**
  * MainChoice - function to provide choose like choice
@@ -171,16 +173,27 @@ void Push_to_git(void)
 		scanf("%s",prompt2);
 		if (strcmp(prompt2, "Y") == 0)
 		{
+			printf("Enter branch name to Push to. !\n:   ");
 			scanf("%s",branch);
 			Push(branch);
+			free(prompt);
+			free(prompt2);
+			sleep(3);
+			GUIMODE();
 		}
 		else if (strcmp(prompt2, "N") == 0)
 		{
 			Push(branch);
+			free(prompt2);
+			free(prompt);
+			sleep(1);
+			GUIMODE();
 		}
 	}
 	else if (strcmp(prompt, "N") == 0)
 	{
+		free(prompt);
+		free(prompt2);
 		GUIMODE();
 	}
 }
