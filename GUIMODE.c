@@ -20,7 +20,7 @@ void MainChoice()
 {
 	printf("\t Wha Do You Want To Do ?\n");
 	printf("\t--------------------------------------------\n\n");
-<<<<<<< HEAD
+
 	printf("\t1.  Add File to Git  & Commit it\n");
 	printf("\t2.  Push To Git\n");
 	printf("\t3.  Pull From Git\n");
@@ -30,7 +30,7 @@ void MainChoice()
 	printf("\t7.  Merge To Branch\n");
 	printf("\t8.  Rebase To  Branch\n");
 	printf("\tAny other number to Quit.\n");
-=======
+
 	printf("\t1.  Add File to Git  & Commit it ---  not ready\n");
 	printf("\t2.  Push To Git           	---  not ready\n");
 	printf("\t3.  Pull From Git         	---  not ready\n");
@@ -39,7 +39,7 @@ void MainChoice()
 	printf("\t6.  Change Branch         	---  not ready\n");
 	printf("\t7.  Merge To Branch       	---  not ready\n");
 	printf("\t8.  Rebase To  Branch     	---  not ready\n");
->>>>>>> main
+
 	printf("\n\tchoose your option :");
 
 }
@@ -53,7 +53,7 @@ void GUIMODE(void)
 	long num;
 	welcome();
 	MainChoice();
-<<<<<<< HEAD
+
 	scanf("%d",&choosen_number);
 	printf("%d\n", choosen_number);
 	Evaluate_choice(choosen_number);
@@ -225,7 +225,3 @@ void merge_selected(void)
 {}
 void rebase_selected(void)
 {}
-=======
-	getchar();
-}
->>>>>>> main
