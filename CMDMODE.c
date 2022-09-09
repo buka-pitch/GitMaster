@@ -22,7 +22,7 @@ void CMDMODE(int argc, char *argv[])
 			{
 				if (argv[k] != NULL)
 				{
-					if (strcmp(argv[k],COMMIT) == 0 || strcmp(argv[k],ADD) == 0 || strcmp(argv[k],HELP) == 0 || strcmp(argv[k],PUSH) == 0 )
+					if (strcmp(argv[k],COMMIT) == 0 || strcmp(argv[k],ADD) == 0 || strcmp(argv[k],HELP) == 0 || strcmp(argv[k],PUSH) == 0 || strcmp(argv[k],CREATE_BRANCH) == 0)
 						break;
 					params[l] = argv[k];
 					l++;
@@ -41,11 +41,15 @@ void CMDMODE(int argc, char *argv[])
 		{
 			Push(argv[i + 1]);
 		}
-
-	        if (strcmp(argv[i], CHANGE_BRANCH) == 0)
-        	{
-                	changeBranch(argv[i + 1]);
-        	}
+		
+		if (strcmp(argv[i],CREATE_BRANCH) == 0)
+		{
+			Create_Branch(argv[i + 1]);
+		}
+	    if (strcmp(argv[i], CHANGE_BRANCH) == 0)
+        {
+          	changeBranch(argv[i + 1]);
+        }
 	}
 	free(filenames);
 }

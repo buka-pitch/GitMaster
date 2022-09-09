@@ -15,15 +15,15 @@ void welcome(void)
 	{
 
 		printf("\n\n\n\t\tLoading ");
-		while (i <= 5)
+		while (i <= 3)
 		{
 			fflush(stdout);
-			printf("#######");
+			printf("################");
 			sleep(1);
-			if (i == 5)
+			if (i == 3)
 			{
 				printf(" | Done\n");
-				sleep(2);
+				sleep(1);
 				system("clear");
 				printf("\t-------------------------------- GiTMaster --------------------------------\n\n");
 				printf("\t---------------------------------------------------------------------------\n\n");
