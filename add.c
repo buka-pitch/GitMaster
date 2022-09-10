@@ -1,5 +1,12 @@
 #include "GitMaster.h"
 
+/**
+ *
+ * add - function to add git files
+ * @argv: argument (filenames)
+ * Return: the filenames
+ */
+
 char** Add(char **argv)
 {
 	char **arguments = (char **)malloc(50*sizeof(char));

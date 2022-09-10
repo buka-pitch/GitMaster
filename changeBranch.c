@@ -1,5 +1,10 @@
 #include "GitMaster.h"
 
+/**
+ * changeBranch - function to change branch
+ * @branch: branch name
+ */
+
 void changeBranch(char *branch)
 {
 	char *cmd = "git", *args[4];
