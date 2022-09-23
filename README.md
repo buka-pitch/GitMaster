@@ -37,7 +37,8 @@ change branch to another branch (checkout branch)
 <img src="/Doc/img/branch.png">
 
 #
-![Uploading Screen Shot 2022-09-24 at 12.38.21 AM.png…]()
+
+<img src="/Doc/img/help.png"/>
 
 ## Simple multi choice mode
 ```diff
