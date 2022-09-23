@@ -24,7 +24,7 @@ This is how we can use GitMaster to replace this commands using inline args
 ./GitMaster -a <filename> -c <commit msg> -p (add branch name optional)
 ```
 <img src="/Doc/img/img.png" />
-default branch name is : main![Uploading Screen Shot 2022-09-24 at 12.38.21 AM.png…]()
+default branch name is : main
 
 
 # 
@@ -37,6 +37,7 @@ change branch to another branch (checkout branch)
 <img src="/Doc/img/branch.png">
 
 #
+![Uploading Screen Shot 2022-09-24 at 12.38.21 AM.png…]()
 
 ## Simple multi choice mode
 ```diff
