@@ -12,9 +12,11 @@
 #define HELP "-h"
 #define CHANGE_BRANCH "-ch"
 #define CREATE_BRANCH "-cr"
+#define GITIGNORE "-ignore"
 
 #include <stdio.h>
 #include <string.h>
+#include <stdbool.h>
 #include <stdlib.h>
 #include <unistd.h>
 #include <sys/wait.h>
@@ -40,4 +42,6 @@ void create_selected(void);
 void changeBranch_selected(void);
 void merge_selected(void);
 void rebase_selected(void);
+void git_ignore(char **str);
+
 #endif

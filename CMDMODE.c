@@ -8,11 +8,18 @@ void CMDMODE(int argc, char *argv[])
 	if (argc < 2)
 		return;
 	char **params = malloc(50*sizeof(char));
+
+	if (params == NULL)
+	{
+		fprintf(stderr, "GitMaster cant access memory space");
+		return;
+	}
+
 	for (i = 0; argv[i];i++)
 	{
 		// Get the help command -h and return help message
 		if (strcmp(argv[i], HELP) == 0 )
-			help();
+			execlp("python3","python3", "help.cpython-310.pyc");	
 		if (strcmp(argv[i], ADD) == 0)
 		{
 		// get all the args after the add command -a
@@ -50,7 +57,33 @@ void CMDMODE(int argc, char *argv[])
         {
           	changeBranch(argv[i + 1]);
         }
+		if (strcmp(argv[i], GITIGNORE) == 0)
+		{
+			char **gitignores = malloc(50 * sizeof(char));
+			if (gitignores == NULL)
+			{
+				fprintf(stderr, "GitMaster can't access memory");
+				return;
+			}
+
+			// get all the args after the add command -a
+			// and add them to the params array to add them to the repository
+			int q = i + 1, p = 0;
+			for (; q < argc; q++)
+			{
+				if (argv[q] != NULL)
+				{
+					if (strcmp(argv[q],COMMIT) == 0 || strcmp(argv[q],ADD) == 0 || strcmp(argv[q],HELP) == 0 || strcmp(argv[q],PUSH) == 0 || strcmp(argv[q],CREATE_BRANCH) == 0)
+						break;
+					gitignores[p] = argv[q];
+					p++;
+				}
+
+			}
+			git_ignore(gitignores);
+		}
 	}
+	free(params);
 	free(filenames);
 }
 
