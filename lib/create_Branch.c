@@ -1,5 +1,11 @@
 #include "GitMaster.h"
 
+/**
+ * Create_Branch - function to create branch
+ * @branchName: string name for the new branch
+ * @Tag: Flags
+ */
+
 void Create_Branch(char *branchName, char *Tag)
 {
 	char *cmd = {"git"}, *args[5];

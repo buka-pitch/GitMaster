@@ -7,7 +7,7 @@
 
 void changeBranch(char *branch)
 {
-	char *args[4];
+	char *args[6];
 	
 	args[0] = "git";
 	args[1] = "checkout";

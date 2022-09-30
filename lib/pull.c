@@ -10,5 +10,6 @@ void _Pull()
 	param[0] = "git";
 	param[1] = "pull";
 	param[2] = NULL;
+
 	_fork_excute(param[0], param);	
 }

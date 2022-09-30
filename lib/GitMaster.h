@@ -24,6 +24,7 @@
 #include <sys/wait.h>
 #include <sys/errno.h>
 #include <stdarg.h>
+#include <stdbool.h>
 
 void Push_to_git(void);
 void Create_Branch(char *branchName, char *Tag);
