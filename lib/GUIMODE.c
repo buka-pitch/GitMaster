@@ -154,7 +154,7 @@ void Commit_Added(void)
 	if (strcmp(prompt, "Y") == 0)
 	{
 		cleaner();
-		printf("please enter commit message ...\n  :");
+		printf("please enter commit message ...\n  : ");
 		scanf("%s", msg);
 		Commit(msg);
 		sleep(1);
