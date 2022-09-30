@@ -1,8 +1,8 @@
 
 CC = gcc
 
-GitMaster: *.c
-	$(CC) *.c  -o GitMaster
+GitMaster: ./lib/*.c
+	$(CC) ./lib/*.c  -o ./bin/GitMaster
 	
 	
 clean:

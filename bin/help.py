@@ -18,5 +18,4 @@ def help():
     print("\t./GitMaster -a main.py master.py options.py -c \"initial commit\" -p dev \n")
     print("\t./GitMaster -a main.py -c \"commit msg\" -p\n")
 
-if __name__ == '__main__':
-    help()
+help()

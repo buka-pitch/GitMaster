@@ -19,7 +19,7 @@ void CMDMODE(int argc, char *argv[])
 	{
 		// Get the help command -h and return help message
 		if (strcmp(argv[i], HELP) == 0 )
-			execlp("python3","python3", "help.cpython-310.pyc");	
+			help();
 		if (strcmp(argv[i], ADD) == 0)
 		{
 		// get all the args after the add command -a
