@@ -1,10 +1,12 @@
 #include "GitMaster.h"
+#include "Colors.h"
 
 void welcome(void)
 {
 
 	int check = system("which git");
 	int i = 0;
+	cyan();
 	system("clear");
 	printf("GUI MODE\n");
 	printf("\t\t------------------------ GiTMaster ------------------------\n\n");
