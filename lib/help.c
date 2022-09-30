@@ -12,14 +12,25 @@ void help()
 	cyan();
 	printf("This program helps you to excute git commands more effectivly\n by using inline command (one line)\n\n");
 	green();
-	printf("Flags\n");
+	printf("Flags : \n\n");
 	printf("\t-a\tAdd multiple files to git\n");
+	red();
+	printf("\t\t\tGitMaster ");
+	cyan();
+	printf("-a ");
+	yellow();
+	printf("index.js index.html\n");
+	green();
 	printf("\t-c\tCommit changes to git folowed by the commit message\n");
 	printf("\t-p\tPush changes to git followed by the upstream branch (optional) default upstream is main\n");
 	printf("\t-h\tPrints this help message\n");
 	printf("\t-ch\tchange to branch followed by the branch name\n");
 	printf("\t-cr\tCreate a new git branch\n\n");
-	printf("Example :\n");
+	printf("\t-init\tInitialize a new git repository and add remote url\n");
+	printf("\t-pull\tPull previouse version of code from git\n");
+	printf("\t-ignore\tAdds a file to git ignore\n");
+	
+	printf("Example :\n\n");
 	yellow();
 	printf("\t./GitMaster -a main.py master.py options.py -c \"initial commit\" -p dev \n");
 	printf("\t./GitMaster -a main.py -c \"commit msg\" -p\n\n");

@@ -1,7 +1,7 @@
 #include "GitMaster.h"
 #include <errno.h>
 
-void _fork_excute(char *cmd,char **params)
+int _fork_excute(char *cmd,char **params)
 {
 // printf("%d \n",(int)sizeof(params+4));
 	// char **arguments = malloc(sizeof(params));
@@ -16,11 +16,13 @@ void _fork_excute(char *cmd,char **params)
 	{
 		execvp(cmd,params);
 		printf("%s : %s\n", strerror(errno),cmd);
-		exit(0);
+		return (1);
 	}
 	else
 	{
 		wait(NULL);
+		return (0);
 	
 	}
+
 }
