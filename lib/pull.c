@@ -1,8 +1,14 @@
 #include "GitMaster.h"
 
+/**
+ * function to pull code from git
+ */
+
 void _Pull()
 {
-	char *cmd = {"git"};
-	char *param[2] = {"git", "pull"};
-	_fork_excute(cmd, param);	
+	char *param[3];
+	param[0] = "git";
+	param[1] = "pull";
+	param[2] = NULL;
+	_fork_excute(param[0], param);	
 }

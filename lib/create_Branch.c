@@ -1,13 +1,24 @@
 #include "GitMaster.h"
 
-void Create_Branch(char *branchName)
+void Create_Branch(char *branchName, char *Tag)
 {
-	char *cmd = {"git"}, *args[4];
+	char *cmd = {"git"}, *args[5];
 
 	args[0] = "git";
 	args[1] = "branch";
-	args[2] = branchName;
-	args[3] = NULL;
+	
+	if (Tag == NULL)
+	{
+		args[2] = branchName;
+		args[3] = NULL;
+	}
+	else
+	{
+		args[2] = Tag;
+		args[3] = branchName;
+		args[4] = NULL;
+	}
+
 
 	_fork_excute(cmd, args);
 }

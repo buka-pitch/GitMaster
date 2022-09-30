@@ -13,6 +13,7 @@
 #define CHANGE_BRANCH "-ch"
 #define CREATE_BRANCH "-cr"
 #define GITIGNORE "-ignore"
+#define INIT "-init"
 #define PULL "-pull"
 
 #include <stdio.h>
@@ -21,10 +22,11 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <sys/wait.h>
+#include <sys/errno.h>
 #include <stdarg.h>
 
 void Push_to_git(void);
-void Create_Branch(char *branchName);
+void Create_Branch(char *branchName, char *Tag);
 void Evaluate_choice(int num);
 void GUIMODE(void);
 void CMDMODE(int argc,char *argv[]);
@@ -33,7 +35,7 @@ char** Add(char **argv);
 void Commit(char *message);
 void Push(char *branch);
 void welcome(void);
-void _fork_excute(char *cmd, char **params);
+int _fork_excute(char *cmd, char **params);
 void changeBranch(char *branch);
 void Commit_Added(void);
 void push_selected(void);
@@ -46,4 +48,6 @@ void merge_selected(void);
 void rebase_selected(void);
 void git_ignore(char **str);
 void _Pull(void);
+void git_init(char *url);
+
 #endif
