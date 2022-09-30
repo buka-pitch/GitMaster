@@ -20,6 +20,8 @@ void CMDMODE(int argc, char *argv[])
 		// Get the help command -h and return help message
 		if (strcmp(argv[i], HELP) == 0 )
 			help();
+		if (strcmp(argv[i], PULL) == 0)
+			_Pull();
 		if (strcmp(argv[i], ADD) == 0)
 		{
 		// get all the args after the add command -a
@@ -29,7 +31,7 @@ void CMDMODE(int argc, char *argv[])
 			{
 				if (argv[k] != NULL)
 				{
-					if (strcmp(argv[k],COMMIT) == 0 || strcmp(argv[k],ADD) == 0 || strcmp(argv[k],HELP) == 0 || strcmp(argv[k],PUSH) == 0 || strcmp(argv[k],CREATE_BRANCH) == 0)
+					if (strcmp(argv[k],COMMIT) == 0 || strcmp(argv[k],ADD) == 0	|| strcmp(argv[k],HELP) == 0 || strcmp(argv[k],PUSH) == 0 || strcmp(argv[k],CREATE_BRANCH) == 0)
 						break;
 					params[l] = argv[k];
 					l++;
