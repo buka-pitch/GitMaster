@@ -20,9 +20,11 @@ void cleaner(void)
  */
 void MainChoice()
 {
+	cyan();
 	printf("\t Wha Do You Want To Do ?\n");
+	red();
 	printf("\t--------------------------------------------\n\n");
-
+	cyan();
 	printf("\t1.  Add File to Git  & Commit it\n");
 	printf("\t2.  Push To Git           	\n");
 	printf("\t3.  Pull From Git				\n");
@@ -31,12 +33,13 @@ void MainChoice()
 	printf("\t6.  Change Branch         	\n");
 	printf("\t7.  Merge To Branch       	---  not ready\n");
 	printf("\t8.  Rebase To  Branch     	---  not ready\n");
+	green();
 	printf("\tAny other key to Quit");
 	printf("\n\tchoose your option :");
 
 }
 
-/**
+/**:w
  * GUIMODE - main function of GUIMODE
  */
 void GUIMODE(void)
@@ -57,8 +60,7 @@ void GUIMODE(void)
  */
 void Evaluate_choice(int num)
 {
-	bool isRunning = true;
-	if (isRunning)
+	if (num && num >= 1)
 	{
 		switch (num){
 		case 1:
@@ -172,13 +174,13 @@ void Push_to_git(void)
 	char *prompt2 = malloc(sizeof(char)*5);
 	char branch[10];
 
-	printf("Do You Want to push it to git now! ?\n :  ");
+	printf("Do You Want to push it to git now! ? (Y/N)\n :  ");
 	scanf("%s",prompt);
 
 	if (strcmp(prompt, "Y") == 0)
 	{
 		cleaner();
-		printf("Do you want to Specify Branch name ?\n : ");
+		printf("Do you want to Specify Branch name ? (Y/N)\n : ");
 		scanf("%s",prompt2);
 		if (strcmp(prompt2, "Y") == 0)
 		{
