@@ -45,7 +45,7 @@ void add_selected(void);
 void show_selected(void);
 void create_selected(void);
 void changeBranch_selected(void);
-void merge_selected(void);
+void merge_selected(char *branch);
 void rebase_selected(void);
 void git_ignore(char **str);
 void _Pull(void);

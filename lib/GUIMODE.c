@@ -89,7 +89,12 @@ void Evaluate_choice(int num)
 			break;
 		case 7:
 			//merge to git
-			merge_selected();
+            {
+              char *branch;
+              printf("Enter a branch Name\n");
+              scanf("%s", branch);
+              merge_selected(branch);
+            }
 			break;
 		case 8:
 			// rebase to git 
@@ -216,12 +221,17 @@ void pull_selected()
 {
 	_Pull();
 }
+
+/**
+ * show_selected - function to show status of the repo
+ */
 void show_selected()
 {
+
 	char *arg[5];
-	arg[1] = "git";
-	arg[2] = "branch";
-	arg[3] = NULL;
+	arg[0] = "git";
+	arg[1] = "status";
+	arg[2] = NULL;
 
 	_fork_excute(arg[0], arg);
 }
@@ -259,8 +269,16 @@ void changeBranch_selected()
 }
 
 
-void merge_selected()
-{}
+void merge_selected(char *branch)
+{
+    char *args[5];
+    args[0]  = "git";
+    args[1] = "merge";
+    args[2] = branch;
+    args[3] = NULL;
+
+    _fork_excute(args[0], args);
+}
 
 void rebase_selected()
 {}
