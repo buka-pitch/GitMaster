@@ -14,12 +14,14 @@ void git_ignore(char **str)
 {
 	FILE *fp;
 	int i;
-	size_t len = 100;
+	size_t len = 0;
 	char **buffer, cmp[100];
+	size_t nread;
 
 	buffer = malloc(sizeof(char) * 50);
 
-	if ((fp = fopen(".gitignore", "w")) == NULL) fprintf(stderr, "cant open file\n");
+	fp = fopen(".gitignore", "a+");
+	if (fp == NULL) fprintf(stderr, "cant open file\n");
 
 	int line = 0;
 
@@ -27,27 +29,18 @@ void git_ignore(char **str)
 	{
 		while (!feof(fp) && !ferror(fp))
 		{
-			if ((getline(buffer, &len, fp)) != -1) {
-
-				if (strstr(buffer[line], str[i]) == 0) {
+			if((getline(buffer, &len, fp)) != -1 ) {
+				if (strstr(buffer[line], str[i]) != NULL) {
 					printf("%s exists in gitignore\n",str[i]);
-					free(buffer);
-					free(str);
 					return;
-				}
+				}				
 
-				printf("%s",buffer[line]);
-				line++;
 			}
-			else {
-
-				fprintf(stderr,"cant read file\n");
-				free(buffer);
-				free(str);
-				return;
-			}
+			
 		}
-		fprintf(fp, "%s\n", str[i]);
+		printf("######################### \n%s added to gitignore file\n",str[i]);
+				fprintf(fp, "%s\n", str[i]);
+
 		
 	}
 	free(buffer);

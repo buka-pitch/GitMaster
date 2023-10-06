@@ -29,11 +29,22 @@ void help()
 	printf("\t-init\tInitialize a new git repository and add remote url\n");
 	printf("\t-pull\tPull previouse version of code from git\n");
 	printf("\t-ignore\tAdds a file to git ignore\n");
-	
+	red();
 	printf("Example :\n\n");
+	green();
+	printf("Full step of pushing to git - adding file, commiting, and pushing\n");
+	printf("adding multiple files with commit msg\n");
 	yellow();
-	printf("\t./GitMaster -a main.py master.py options.py -c \"initial commit\" -p dev \n");
+	printf("\t./GitMaster -a main.py master.py options.py -c \"initial commit\" -p dev \n\n");
 	printf("\t./GitMaster -a main.py -c \"commit msg\" -p\n\n");
+	green();
+	printf("Initializing new repo\n");
+	yellow();
+	printf("\t./GitMaster -init https://your-git-repo-url.git\n\n");
+	green();
+	printf("adding gitignore value\n");
+	yellow();
+	printf("\t./GitMaster -ignore \".env\" \"node_modules\" \n\n");
 	white();
 	printf("===================================================\n");
 }

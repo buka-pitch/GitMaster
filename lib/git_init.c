@@ -13,6 +13,7 @@ void git_init(char *url)
 	char *branch = "main";
 	args[0] = "git";
 	args[1] = "init";
+	args[2] = NULL;
 
 	/* running the init command*/
 	ps = _fork_excute(args[0], args);
