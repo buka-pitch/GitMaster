@@ -84,7 +84,7 @@ void CMDMODE(int argc, char *argv[])
         {
           	changeBranch(argv[i + 1]);
         }
-		
+
 		// Get the GitIgnore command
 		if (strcmp(argv[i], GITIGNORE) == 0)
 		{

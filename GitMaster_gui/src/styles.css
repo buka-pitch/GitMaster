@@ -1,0 +1,15 @@
+#root{
+  padding: 0px;
+  margin:0px;
+  border:none;
+  width:100vw;
+  height:100vh;
+  background-color: black;
+  overflow:hidden;
+  color:cyan;
+}
+
+body{
+  padding: 0;
+  margin:0;
+}
